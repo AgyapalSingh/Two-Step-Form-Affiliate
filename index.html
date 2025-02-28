@@ -80,16 +80,31 @@
 
               <div class="uniq-step-2">
                 <label for="followers">How Many Followers Do You Have ?</label>
-                <select id="followers" name="followers">
+                <select id="followers" name="followers" required>
+                  <option value="">-</option>
                   <option value="0 < 5,000">0 < 5,000</option>
                   <option value="5,000 < 10,000">5,000 < 10,000</option>
                   <option value="10,000 < 50,000">10,000 < 50,000</option>
                   <option value="50,000 < 100,000">50,000 < 100,000</option>
                   <option value="100,000 +">100,000 +</option>
                 </select>
+
+
+                <label for="influencerCategory">What category do you belong ? </label>
+                <select id="influencerCategory" name="influencerCategory" required>
+                  <option value="Beauty & Fashion">Beauty & Fashion</option>
+                  <option value="Food & Cooking">Food & Cooking</option>
+                  <option value="Health & Wellness">Health & Wellness</option>
+                  <option value="Travel & Adventure">Travel & Adventure</option>
+                  <option value="Parenting & Family">Parenting & Family</option>
+                  <option value="Lifestyles & Home Decor">Lifestyles & Home Decor</option>
+                  <option value="Tech & Gadgets">Tech & Gadgets</option>
+                </select>
+
 
                 <label for="monthlyReach">Monthly Reach ?</label>
-                <select id="monthlyReach" name="monthlyReach">
+                <select id="monthlyReach" name="monthlyReach" required>
+                  <option value="">-</option>
                   <option value="0 < 5,000">0 < 5,000</option>
                   <option value="5,000 < 10,000">5,000 < 10,000</option>
                   <option value="10,000 < 50,000">10,000 < 50,000</option>
@@ -97,10 +112,14 @@
                   <option value="100,000 +">100,000 +</option>
                 </select>
 
-                <label for="avgLikes">Average Likes (Optional): </label>
+                <label for="avgLikes"
+                  >Average Post Likes <i>(Optional)</i>:
+                </label>
                 <input type="number" id="avgLikes" name="avgLikes" required />
 
-                <label for="avgComments">Average Comments (Optional): </label>
+                <label for="avgComments"
+                  >Average Post Comments <i>(Optional)</i>:
+                </label>
                 <input
                   type="number"
                   id="avgComments"
@@ -108,13 +127,13 @@
                   required
                 />
 
-                <label for="avgShares">Average Shares (Optional): </label>
+                <label for="avgShares">Average Post Shares <i>(Optional)</i>: </label>
                 <input type="number" id="avgShares" name="avgShares" required />
 
-                <label for="monthlyReach">How do you know about us ? </label>
-                <select id="monthlyReach" name="monthlyReach">
-                  <option value="0 < 5,000">Social Media</option>
-                  <option value="5,000 < 10,000">Website</option>
+                <label for="monthlyReach">How did you hear about us ? </label>
+                <select id="monthlyReach" name="monthlyReach" required>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Website">Website</option>
                 </select>
 
                 <input type="hidden" id="date" name="date" />

@@ -129,6 +129,11 @@
   color: white;
 }
 
+.uniq-aff-form form label i{
+  color: rgb(180, 180, 180);
+  font-size: 10px;
+}
+
 /* Affiliate Program Form Input*/
 .uniq-aff-form form input {
   height: 40px;

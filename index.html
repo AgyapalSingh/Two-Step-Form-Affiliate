@@ -47,7 +47,7 @@
           <div class="uniq-aff-form">
             <h1>Affiliate Program</h1>
             <form id="contactForm">
-              <div class="uniq-step-1">
+              <div class="uniq-step-1 uniq-step">
                 <label for="name">Name :</label>
                 <input type="text" id="name" name="name" required />
 
@@ -76,9 +76,13 @@
                 ></textarea>
 
                 <input type="hidden" id="date" name="date" />
+
+
+                <button type="button" class="uniq-next-step-btn">Next ></button>
+
               </div>
 
-              <div class="uniq-step-2">
+              <div class="uniq-step-2 uniq-step">
                 <label for="followers">How Many Followers Do You Have ?</label>
                 <select id="followers" name="followers" required>
                   <option value="" selected>-</option>
@@ -138,6 +142,8 @@
                 </select>
 
                 <input type="hidden" id="date" name="date" />
+
+                <button type="button" class="uniq-prev-step-btn">< Previous</button>
 
                 <button type="submit" class="uniq-aff-submit-btn">
                   Submit

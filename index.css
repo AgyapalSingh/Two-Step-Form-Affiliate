@@ -290,3 +290,27 @@
   background-color: #1834571f;
   color: #183457;
 }
+
+.uniq-prev-step-btn , .uniq-next-step-btn{
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #183457;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+
+
+.uniq-step {
+  display: none;
+}
+
+.uniq-step.stepActive {
+  display: flex;
+}

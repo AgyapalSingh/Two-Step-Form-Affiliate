@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!name || !email || !social1 || !message) {
       formResponse.textContent =
-        "*Please fill the required fields before proceed to next step";
+        "*Please fill the required fields before proceed.";
       formResponse.style.color = "red";
       setTimeout(() => {
         formResponse.textContent = "";

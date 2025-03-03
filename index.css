@@ -88,6 +88,55 @@
   text-align: center;
 }
 
+.uniq-aff-join-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.uniq-aff-join-steps-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #183457;
+  padding: 0px 10px 10px 10px;
+  border-radius: 5px;
+}
+
+.uniq-aff-join-steps-card h1{
+  font-size: 18px;
+  font-weight: 300;
+  color: #183457;
+  margin-bottom: 10px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  background-color: #183457;
+}
+
+.uniq-aff-join-steps-card span{
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .uniq-form-sec-title {
   display: flex;
   flex-direction: column;
@@ -332,14 +381,14 @@
 
 /*  FAQS Accordion */
 
-.uniq-affiliate-faqs{
+.uniq-affiliate-faqs {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5vh;
 }
 
-.uniq-affiliate-faqs h1{
+.uniq-affiliate-faqs h1 {
   text-transform: uppercase;
   color: white;
   color: #183457;

@@ -39,6 +39,7 @@
   font-family: "Poppins", sans-serif;
   width: 100%;
   align-items: center;
+  scroll-behavior: smooth;
 }
 
 .uniq-affilate-container {
@@ -60,6 +61,19 @@
   text-transform: uppercase;
   color: #31324f;
   text-align: center;
+}
+
+.uniq-aff-info a {
+  text-decoration: none;
+  background-color: #183457;
+  color: white;
+  height: 35px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px 0px;
 }
 
 .empty-div-inaff {

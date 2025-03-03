@@ -317,6 +317,20 @@
 
 /*  FAQS Accordion */
 
+.uniq-affiliate-faqs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.uniq-affiliate-faqs h1{
+  text-transform: uppercase;
+  color: white;
+  color: #183457;
+  font-size: 24px;
+  font-weight: 300;
+}
 .accordion {
   width: 70%;
   margin: 0 15%;

@@ -129,7 +129,7 @@
   color: white;
 }
 
-.uniq-aff-form form label i{
+.uniq-aff-form form label i {
   color: rgb(180, 180, 180);
   font-size: 10px;
 }
@@ -291,7 +291,8 @@
   color: #183457;
 }
 
-.uniq-prev-step-btn , .uniq-next-step-btn{
+.uniq-prev-step-btn,
+.uniq-next-step-btn {
   width: 120px;
   height: 30px;
   font-size: 14px;
@@ -306,11 +307,90 @@
   margin: 20px 0px;
 }
 
-
 .uniq-step {
   display: none;
 }
 
 .uniq-step.stepActive {
   display: flex;
+}
+
+/*  FAQS Accordion */
+
+.accordion {
+  width: 70%;
+  margin: 0 15%;
+}
+
+.accordion__header {
+  padding: 1em;
+  margin-top: 2px;
+  display: flex;
+  background-color: #f5f2ee;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: "poppins";
+  border-radius: 7px 7px 0px 0px;
+}
+.accordion__header > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.accordion__header.is-active {
+  background-color: #eee9e3 !important;
+}
+
+.accordion__toggle {
+  margin-left: 10px;
+  height: 3px;
+  background-color: #222;
+  width: 13px;
+  display: block;
+  position: relative;
+  flex-shrink: 1;
+  border-radius: 2px;
+}
+
+.accordion__toggle::before {
+  content: "";
+  width: 3px;
+  height: 13px;
+  display: block;
+  background-color: #17153b;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  border-radius: 2px;
+}
+
+.is-active .accordion__toggle {
+  background-color: #000;
+}
+.is-active .accordion__toggle::before {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .accordion {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.accordion__body {
+  display: none;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-radius: 0px 0px 7px 7px;
+  letter-spacing: 0.1px;
+}
+
+.accordion__body p {
+  font-size: 14px;
+  font-family: "poppins";
+}
+.accordion__body.is-active {
+  display: block;
 }

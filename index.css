@@ -34,7 +34,6 @@
   }
 }
 
-
 .uniq-affilate {
   display: flex;
   flex-direction: column;
@@ -55,7 +54,6 @@
   width: 100%;
 }
 
-
 .uniq-aff-info .bg-image-1 {
   display: flex;
   flex-direction: column;
@@ -75,20 +73,17 @@
   display: none;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .uniq-aff-info .bg-image-1 {
     display: none;
   }
-  .uniq-aff-content{
+  .uniq-aff-content {
     width: 90%;
   }
 
   .uniq-aff-info .bg-image-2 {
     display: flex;
   }
-  
 }
 
 .uniq-aff-info h1 {
@@ -114,7 +109,7 @@
   font-size: 14px;
 }
 
-.uniq-aff-content{
+.uniq-aff-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,7 +149,7 @@
   width: 70%;
 }
 
-.uniq-aff-join-steps-card h1{
+.uniq-aff-join-steps-card h1 {
   font-size: 18px;
   font-weight: 300;
   color: #183457;
@@ -165,24 +160,10 @@
   background-color: #183457;
 }
 
-.uniq-aff-join-steps-card span{
+.uniq-aff-join-steps-card span {
   font-size: 14px;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .uniq-form-sec-title {
   display: flex;
@@ -317,8 +298,6 @@
   .uniq-aff-form {
     width: 70%;
   }
-
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -329,7 +308,7 @@
     height: 100%;
   }
 
-  .uniq-aff-join-steps{
+  .uniq-aff-join-steps {
     width: 100%;
   }
 

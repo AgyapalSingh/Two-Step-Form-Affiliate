@@ -117,7 +117,6 @@
   font-size: 14px;
 }
 
-
 /* Affiliate Container After Hero */
 .uniq-affilate-container {
   width: 80%;
@@ -136,14 +135,13 @@
   text-align: center;
 }
 
-
-
 /* Affiliate Join Steps Container */
 .uniq-aff-join-steps {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 0px 10%;
   margin: 40px 0px;
   gap: 30px;
 }
@@ -192,12 +190,9 @@
   text-align: center;
 }
 
-.text-1{
+.text-1 {
   padding: 2px 10px !important;
 }
-
-
-
 
 /* Contact Form */
 .uniq-contact-forms {
@@ -313,8 +308,6 @@
   margin-top: 55px;
 }
 
-
-
 @media screen and (max-width: 1280px) {
   .uniq-aff-form {
     width: 70%;
@@ -331,6 +324,7 @@
 
   .uniq-aff-join-steps {
     width: 100%;
+    flex-direction: column;
   }
 
   .uniq-aff-join-steps-card {

@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .forEach((input) => (input.value = ""));
         setTimeout(() => {
           formResponse.textContent = "";
-          window.location.href = "https://uniqaya.com/";
+          window.location.href = "https://uniqaya.com/pages/thank-you";
         }, 1000);
         step2.classList.remove("stepActive");
         step1.classList.add("stepActive");

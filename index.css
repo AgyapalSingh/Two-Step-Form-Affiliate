@@ -34,6 +34,7 @@
   }
 }
 
+/* Affiliate Section */
 .uniq-affilate {
   display: flex;
   flex-direction: column;
@@ -42,10 +43,7 @@
   align-items: center;
 }
 
-.uniq-affilate-container {
-  width: 80%;
-}
-
+/* Hero Banner */
 .uniq-aff-info {
   display: flex;
   flex-direction: column;
@@ -54,6 +52,7 @@
   width: 100%;
 }
 
+/* Hero Banner Image for Desktop */
 .uniq-aff-info .bg-image-1 {
   display: flex;
   flex-direction: column;
@@ -63,6 +62,7 @@
   filter: brightness(30%);
 }
 
+/* Hero Banner Image for Mobile */
 .uniq-aff-info .bg-image-2 {
   display: flex;
   flex-direction: column;
@@ -77,25 +77,33 @@
   .uniq-aff-info .bg-image-1 {
     display: none;
   }
-  .uniq-aff-content {
-    width: 90%;
-  }
-
   .uniq-aff-info .bg-image-2 {
     display: flex;
   }
 }
 
-.uniq-aff-info h1 {
+/* Hero Banner Content */
+.uniq-aff-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+}
+
+/* Hero Banner Content h1 */
+.uniq-aff-content h1 {
   font-size: 48px;
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-weight: 600;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
 }
 
-.uniq-aff-info a {
+/* Hero Banner Content a */
+.uniq-aff-content a {
   text-decoration: none;
   background-color: #ffffff;
   color: #183457;
@@ -109,24 +117,18 @@
   font-size: 14px;
 }
 
-.uniq-aff-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  color: white;
+
+/* Affiliate Container After Hero */
+.uniq-affilate-container {
+  width: 80%;
 }
 
-.empty-div-inaff {
-  height: 5vh;
-}
-
-
-.uniq-aff-info-para-div{
+/* Affiliate Container Info Div*/
+.uniq-aff-info-para-div {
   margin: 40px 0px;
-  border: 1px solid red;
 }
+
+/* Affiliate Container Info P*/
 .uniq-aff-info-para {
   padding: 0px 50px;
   font-size: 15px;
@@ -134,6 +136,9 @@
   text-align: center;
 }
 
+
+
+/* Affiliate Join Steps Container */
 .uniq-aff-join-steps {
   display: flex;
   justify-content: center;
@@ -141,9 +146,9 @@
   flex-direction: column;
   margin: 40px 0px;
   gap: 20px;
-  border: 1px solid red;
 }
 
+/* Affiliate Join Steps Card*/
 .uniq-aff-join-steps-card {
   display: flex;
   justify-content: center;
@@ -155,6 +160,7 @@
   width: 70%;
 }
 
+/* Affiliate Join Steps Card h1*/
 .uniq-aff-join-steps-card h1 {
   font-size: 18px;
   font-weight: 300;
@@ -166,38 +172,22 @@
   background-color: #183457;
 }
 
+/* Affiliate Join Steps Card span*/
 .uniq-aff-join-steps-card span {
   font-size: 14px;
   text-align: center;
 }
 
-.uniq-form-sec-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  /* background-color: #183457; */
-  margin-bottom: 80px;
-}
 
-.uniq-form-sec-title h1 {
-  text-transform: uppercase;
-  color: white;
-  color: #183457;
-  font-size: 24px;
-  font-weight: 300;
-}
 
-/* Contact Forms */
 
+
+/* Contact Form */
 .uniq-contact-forms {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 40px 0px;
-  gap: 20px;
-  border: 1px solid red;
 }
 
 /* Affiliate Program Form Container*/
@@ -230,6 +220,7 @@
   color: white;
 }
 
+/* Affiliate Program Form Label Itallic*/
 .uniq-aff-form form label i {
   color: rgb(180, 180, 180);
   font-size: 10px;
@@ -265,6 +256,7 @@
   font-style: italic;
 }
 
+/* Add More Links btn */
 .add-more-links {
   width: 120px;
   height: 30px;
@@ -278,6 +270,14 @@
   cursor: pointer;
   text-transform: uppercase;
   margin: 20px 0px;
+}
+
+/* Additional links Div */
+.additional-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: none;
 }
 
 /* Affiliate Program Form Button*/
@@ -296,12 +296,7 @@
   margin-top: 55px;
 }
 
-.additional-links {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  display: none;
-}
+
 
 @media screen and (max-width: 1280px) {
   .uniq-aff-form {
@@ -430,7 +425,6 @@
   align-items: center;
   margin-bottom: 5vh;
   margin: 40px 0px;
-  border: 1px solid red;
 }
 
 .uniq-affiliate-faqs h1 {
@@ -443,7 +437,6 @@
 .accordion {
   width: 70%;
   margin: 40px 15%;
-  border: 1px solid red;
 }
 
 .accordion__header {

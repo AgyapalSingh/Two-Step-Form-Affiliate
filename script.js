@@ -96,7 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
           .forEach((input) => (input.value = ""));
         setTimeout(() => {
           formResponse.textContent = "";
-        }, 2000);
+          window.location.href = "https://uniqaya.com/";
+        }, 1000);
         step2.classList.remove("stepActive");
         step1.classList.add("stepActive");
       })
@@ -106,8 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
-
-
 
 $(".accordion__header").click(function (e) {
   e.preventDefault();

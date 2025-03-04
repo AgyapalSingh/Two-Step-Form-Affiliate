@@ -522,3 +522,21 @@
 .accordion__body.is-active {
   display: block;
 }
+
+
+
+.uniq-aff-bottom-btn{
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.uniq-aff-bottom-btn a{
+  text-decoration: none;
+  background-color: #183457;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

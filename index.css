@@ -145,7 +145,7 @@
   align-items: center;
   flex-direction: column;
   margin: 40px 0px;
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Affiliate Join Steps Card*/
@@ -154,22 +154,36 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #183457;
+  /* border: 1px solid #183457; */
   padding: 0px 10px 10px 10px;
   border-radius: 5px;
   width: 70%;
+}
+
+.uniq-aff-join-steps-card img {
+  width: 50px;
+  margin: 20px;
 }
 
 /* Affiliate Join Steps Card h1*/
 .uniq-aff-join-steps-card h1 {
   font-size: 18px;
   font-weight: 300;
-  color: #183457;
   margin-bottom: 10px;
   width: 100px;
   text-align: center;
-  color: white;
+  color: #183457;
+}
+
+.uniq-aff-join-steps-card h2 {
   background-color: #183457;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 /* Affiliate Join Steps Card span*/

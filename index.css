@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .Header {
@@ -33,13 +34,13 @@
   }
 }
 
+
 .uniq-affilate {
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   width: 100%;
   align-items: center;
-  scroll-behavior: smooth;
 }
 
 .uniq-affilate-container {

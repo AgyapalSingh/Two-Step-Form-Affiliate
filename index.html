@@ -107,6 +107,9 @@
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" required />
 
+                <label for="address">Address :</label>
+                <input type="text" id="address" name="address" required />
+
                 <label for="social1">Social Link 1 :</label>
                 <input type="text" id="social1" name="social1" required />
 
@@ -175,20 +178,16 @@
                   <option value="100,000 +">100,000 +</option>
                 </select>
 
-                <label for="avgLikes"
-                  >Average Post Likes <i>(Optional)</i>:
+                <label for="audienceAge"
+                  >What is your audience demographic primarily composed of ?
                 </label>
-                <input type="number" id="avgLikes" name="avgLikes" />
-
-                <label for="avgComments"
-                  >Average Post Comments <i>(Optional)</i>:
-                </label>
-                <input type="number" id="avgComments" name="avgComments" />
-
-                <label for="avgShares"
-                  >Average Post Shares <i>(Optional)</i>:
-                </label>
-                <input type="number" id="avgShares" name="avgShares" />
+                <select id="audienceAge" name="audienceAge" required>
+                  <option value="" selected>-</option>
+                  <option value="18 - 24 Years Old">18 - 24 Years Old</option>
+                  <option value="25 - 34 Years Old">25 - 34 Years Old</option>
+                  <option value="35 - 44 Years Old">35 - 44 Years Old</option>
+                  <option value="Others">Others</option>
+                </select>
 
                 <label for="howYouHear">How did you hear about us ? </label>
                 <select id="howYouHear" name="howYouHear" required>

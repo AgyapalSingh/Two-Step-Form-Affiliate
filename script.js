@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function validateStep1() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
+    const address = document.getElementById("address").value.trim();
     const social1 = document.getElementById("social1").value.trim();
     const message = document.getElementById("message").value.trim();
 
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(this);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbzzGlxv24vUrbI-3L5CJK7sE132NYDy9Jdh1vwO_rjNqlLpDuYf9cJPcH2_Vh8Vd9vd6w/exec",
+      "https://script.google.com/macros/s/AKfycbxyLYUZbYOo-r-uop8Wgxonu_IVM94Q12UgYGI6i8UJSoRMPijlnFT2TaF6IGekdvV84g/exec",
       {
         method: "POST",
         body: formData,

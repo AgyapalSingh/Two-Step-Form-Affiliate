@@ -97,6 +97,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const formResponse = document.getElementById("formResponse");
     formResponse.textContent = "Submitting your response, please wait...";
 
+    const checkboxes = document.querySelectorAll('input[name="postFormats[]"]');
+    const atLeastOneChecked = Array.from(checkboxes).some(
+      (checkbox) => checkbox.checked
+    );
+
+    if (!atLeastOneChecked) {
+      event.preventDefault();
+      formResponse.textContent = "Please select at least one post format.";
+      formResponse.style.color = "red";
+      setTimeout(() => {
+        formResponse.textContent = "";
+        formResponse.style.color = "green";
+      }, 2000);
+      return;
+    }
+
     const formData = new FormData(this);
 
     fetch(

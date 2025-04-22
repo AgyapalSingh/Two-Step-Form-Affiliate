@@ -24,6 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Mobile Number
+  const mobileInput = document.getElementById("mobile");
+  mobileInput.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "");
+    const mobilePattern = /^[6-9][0-9]{9}$/;
+    if (this.value.length === 10) {
+      if (!mobilePattern.test(this.value)) {
+        formResponse.textContent = "Mobile number must start with 6-9.";
+        formResponse.style.color = "red";
+      } else {
+        formResponse.textContent = "Mobile number looks good!";
+        formResponse.style.color = "green";
+        setTimeout(() => {
+          formResponse.textContent = "";
+        }, 2000);
+      }
+    } else {
+      formResponse.textContent = "Mobile number must be exactly 10 digits.";
+      formResponse.style.color = "red";
+    }
+  });
+
   // Step Navigation Elements
   const step1 = document.querySelector(".uniq-step-1");
   const step2 = document.querySelector(".uniq-step-2");
@@ -41,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const social1 = document.getElementById("social1").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !social1 || !message) {
+    if (!name || !email || !address || !mobile || !social1 || !message) {
       formResponse.textContent =
         "*Please fill the required fields before proceed.";
       formResponse.style.color = "red";
@@ -78,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(this);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxyLYUZbYOo-r-uop8Wgxonu_IVM94Q12UgYGI6i8UJSoRMPijlnFT2TaF6IGekdvV84g/exec",
+      "https://script.google.com/macros/s/AKfycbwaadgUdXIH2oJWnMCcboe7oyFdF5h76CnHqRHEG2JenMpZJRgYshoosr-6VFMz-l5yvw/exec",
       {
         method: "POST",
         body: formData,

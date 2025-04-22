@@ -149,7 +149,9 @@
               </div>
 
               <div class="uniq-step-2 uniq-step">
-                <label for="followers">1. How many followers do you have ?</label>
+                <label for="followers"
+                  >1. How many followers do you have ?</label
+                >
                 <select id="followers" name="followers" required>
                   <option value="" selected>-</option>
                   <option value="0 < 5,000">0 < 5,000</option>
@@ -160,12 +162,13 @@
                 </select>
 
                 <label for="influencerCategory"
-                  >2. What category do you belong to?
-                </label>
+                  >2. What category do you belong to?</label
+                >
                 <select
                   id="influencerCategory"
                   name="influencerCategory"
                   required
+                  onchange="handleCategoryChange(this)"
                 >
                   <option value="" selected>-</option>
                   <option value="Beauty & Fashion">Beauty & Fashion</option>
@@ -179,6 +182,18 @@
                   <option value="Tech & Gadgets">Tech & Gadgets</option>
                   <option value="Others">Others</option>
                 </select>
+                <div
+                  id="otherCategoryInputContainer"
+                  style="display: none; width: 100%; margin-bottom: 20px"
+                >
+                  <input
+                    type="text"
+                    id="otherCategoryInput"
+                    placeholder="Please specify"
+                    oninput="updateCategorySelect()"
+                    style="width: 100%"
+                  />
+                </div>
 
                 <label for="monthlyReach">3. Monthly Reach ?</label>
                 <select id="monthlyReach" name="monthlyReach" required>
@@ -191,15 +206,34 @@
                 </select>
 
                 <label for="audienceAge"
-                  >4. What is your audience demographic primarily composed of ?
-                </label>
-                <select id="audienceAge" name="audienceAge" required>
+                  >4. What is your audience demographic primarily composed
+                  of?</label
+                >
+                <select
+                  id="audienceAge"
+                  name="audienceAge"
+                  required
+                  onchange="handleAudienceChange(this)"
+                >
                   <option value="" selected>-</option>
                   <option value="18 - 24 Years Old">18 - 24 Years Old</option>
                   <option value="25 - 34 Years Old">25 - 34 Years Old</option>
                   <option value="35 - 44 Years Old">35 - 44 Years Old</option>
                   <option value="Others">Others</option>
                 </select>
+
+                <div
+                  id="otherAgeInputContainer"
+                  style="display: none; width: 100%; margin-bottom: 20px"
+                >
+                  <input
+                    type="text"
+                    id="otherAgeInput"
+                    placeholder="Please specify"
+                    oninput="updateSelectWithCustomValue()"
+                    style="width: 100%"
+                  />
+                </div>
 
                 <label>
                   5. In which of the following formats would you be comfortable
@@ -232,13 +266,31 @@
                   </label>
                 </div>
 
-                <label for="howYouHear">6. How did you hear about us ? </label>
-                <select id="howYouHear" name="howYouHear" required>
+                <label for="howYouHear">6. How did you hear about us?</label>
+                <select
+                  id="howYouHear"
+                  name="howYouHear"
+                  required
+                  onchange="handleHowYouHearChange(this)"
+                >
                   <option value="" selected>-</option>
                   <option value="Social Media">Social Media</option>
                   <option value="Website">Website</option>
                   <option value="Others">Others</option>
                 </select>
+
+                <div
+                  id="otherHowYouHearInputContainer"
+                  style="display: none; width: 100%; margin-bottom: 20px"
+                >
+                  <input
+                    type="text"
+                    id="otherHowYouHearInput"
+                    placeholder="Please specify"
+                    oninput="updateHowYouHearSelect()"
+                    style="width: 100%"
+                  />
+                </div>
 
                 <input type="hidden" id="date" name="date" />
 
@@ -322,6 +374,121 @@
       </div>
     </section>
 
+    <script>
+      const categorySelect = document.getElementById("influencerCategory");
+      const categoryInput = document.getElementById("otherCategoryInput");
+      const categoryInputContainer = document.getElementById(
+        "otherCategoryInputContainer"
+      );
+
+      function handleCategoryChange(select) {
+        if (select.value === "Others") {
+          categoryInputContainer.style.display = "block";
+        } else {
+          categoryInputContainer.style.display = "none";
+          categoryInput.value = "";
+          removeCustomCategoryOption();
+        }
+      }
+
+      function updateCategorySelect() {
+        const customValue = categoryInput.value.trim();
+
+        removeCustomCategoryOption();
+
+        if (customValue !== "") {
+          const customOption = new Option(customValue, customValue, true, true);
+          customOption.setAttribute("data-custom", "true");
+          categorySelect.add(customOption);
+        }
+      }
+
+      function removeCustomCategoryOption() {
+        const options = Array.from(categorySelect.options);
+        const customOption = options.find(
+          (opt) => opt.dataset.custom === "true"
+        );
+        if (customOption) {
+          categorySelect.remove(customOption.index);
+        }
+      }
+      
+      const howYouHearSelect = document.getElementById("howYouHear");
+      const howYouHearInput = document.getElementById("otherHowYouHearInput");
+      const howYouHearInputContainer = document.getElementById(
+        "otherHowYouHearInputContainer"
+      );
+
+      function handleHowYouHearChange(select) {
+        if (select.value === "Others") {
+          howYouHearInputContainer.style.display = "block";
+        } else {
+          howYouHearInputContainer.style.display = "none";
+          howYouHearInput.value = "";
+          removeCustomHowYouHearOption();
+        }
+      }
+
+      function updateHowYouHearSelect() {
+        const customValue = howYouHearInput.value.trim();
+
+        removeCustomHowYouHearOption();
+
+        if (customValue !== "") {
+          const customOption = new Option(customValue, customValue, true, true);
+          customOption.setAttribute("data-custom", "true");
+          howYouHearSelect.add(customOption);
+        }
+      }
+
+      function removeCustomHowYouHearOption() {
+        const options = Array.from(howYouHearSelect.options);
+        const customOption = options.find(
+          (opt) => opt.dataset.custom === "true"
+        );
+        if (customOption) {
+          howYouHearSelect.remove(customOption.index);
+        }
+      }
+
+
+      const selectElement = document.getElementById("audienceAge");
+      const otherInput = document.getElementById("otherAgeInput");
+      const otherInputDiv = document.getElementById("otherAgeInputContainer");
+
+      function handleAudienceChange(select) {
+        if (select.value === "Others") {
+          otherInputDiv.style.display = "block";
+        } else {
+          otherInputDiv.style.display = "none";
+          otherInput.value = "";
+          removeCustomOption();
+        }
+      }
+
+      function updateSelectWithCustomValue() {
+        const customValue = otherInput.value.trim();
+
+        // Remove old custom option if it exists
+        removeCustomOption();
+
+        if (customValue !== "") {
+          const customOption = new Option(customValue, customValue, true, true);
+          customOption.setAttribute("data-custom", "true");
+          selectElement.add(customOption);
+        }
+      }
+
+      function removeCustomOption() {
+        const options = Array.from(selectElement.options);
+        const customOption = options.find(
+          (opt) => opt.dataset.custom === "true"
+        );
+        if (customOption) {
+          selectElement.remove(customOption.index);
+        }
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

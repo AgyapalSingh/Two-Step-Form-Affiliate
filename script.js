@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(this);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwaadgUdXIH2oJWnMCcboe7oyFdF5h76CnHqRHEG2JenMpZJRgYshoosr-6VFMz-l5yvw/exec",
+      "https://script.google.com/macros/s/AKfycbyrUVeAsOmLfnMU-QLNVjgbORA-qVAIW40mPIDPFBCYAS9sLh_6kYTRl3CyH1kWFLWr6w/exec",
       {
         method: "POST",
         body: formData,

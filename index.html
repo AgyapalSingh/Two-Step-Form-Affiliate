@@ -375,6 +375,8 @@
     </section>
 
     <script>
+
+      // Influencer Category
       const categorySelect = document.getElementById("influencerCategory");
       const categoryInput = document.getElementById("otherCategoryInput");
       const categoryInputContainer = document.getElementById(
@@ -384,8 +386,10 @@
       function handleCategoryChange(select) {
         if (select.value === "Others") {
           categoryInputContainer.style.display = "block";
+          categoryInput.required = true;
         } else {
           categoryInputContainer.style.display = "none";
+          categoryInput.required = false;
           categoryInput.value = "";
           removeCustomCategoryOption();
         }
@@ -412,7 +416,8 @@
           categorySelect.remove(customOption.index);
         }
       }
-      
+
+      // How you hear
       const howYouHearSelect = document.getElementById("howYouHear");
       const howYouHearInput = document.getElementById("otherHowYouHearInput");
       const howYouHearInputContainer = document.getElementById(
@@ -422,8 +427,10 @@
       function handleHowYouHearChange(select) {
         if (select.value === "Others") {
           howYouHearInputContainer.style.display = "block";
+          howYouHearInput.required = true;
         } else {
           howYouHearInputContainer.style.display = "none";
+          howYouHearInput.required = false;
           howYouHearInput.value = "";
           removeCustomHowYouHearOption();
         }
@@ -452,6 +459,7 @@
       }
 
 
+      // Audience Age
       const selectElement = document.getElementById("audienceAge");
       const otherInput = document.getElementById("otherAgeInput");
       const otherInputDiv = document.getElementById("otherAgeInputContainer");
@@ -459,8 +467,10 @@
       function handleAudienceChange(select) {
         if (select.value === "Others") {
           otherInputDiv.style.display = "block";
+          otherInput.required = true;
         } else {
           otherInputDiv.style.display = "none";
+          otherInput.required = false;
           otherInput.value = "";
           removeCustomOption();
         }

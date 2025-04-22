@@ -428,6 +428,38 @@
   display: flex;
 }
 
+
+.post-formats{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+
+.post-formats label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap : 20px
+}
+
+
+.post-formats label input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap : 20px
+}
+
+
+.post-formats label span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap : 20px;
+  margin-top: -10px;
+}
+
 /*  FAQS Accordion */
 
 .uniq-affiliate-faqs {
